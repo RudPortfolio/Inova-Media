@@ -34,12 +34,22 @@
     .size_area {
         width: 550px;
     }
-    .side_name{
-        color: black;
-        position: fixed;
-        transform: skew(-20deg);
-        style=left: 70%;
-  
+    .side_name_left{
+        color: #707070;
+        position: relative;
+        width: 50px;
+        left: 130px;
+        font-size: 7em;
+        font-family: Versus;
+        
+    }
+    .side_name_right{
+        color: #707070;
+        position: relative;
+        width: 50px;
+        right: 10px;
+        font-size: 7em;
+        font-family: Versus;
         
     }
     
@@ -63,12 +73,22 @@
      
             
             
-            <div style="top: 100px">
+            <div>
             @php
-            $string = "Inova";
+            $string = "INOVA";
             $chars = str_split($string);
             foreach ($chars as $char) {
-                echo "<span class='side_name' '>" . $char . "</span><br>";
+                echo "<span class='side_name_left'>" . $char . "</span><br>";
+            }
+            @endphp
+            </div>
+
+            <div>
+            @php
+            $string = "MEDIA";
+            $chars = str_split($string);
+            foreach ($chars as $char) {
+                echo "<span class='side_name_left'>" . $char . "</span><br>";
             }
             @endphp
             </div>
@@ -81,10 +101,7 @@
                 
                 <div class="mt-16 flex justify-content">
                
-                @php
-                $variable = 1;
-                @endphp
-                @if($variable == 1)
+             
                     
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8" style="height: 700px; width: 600px">
                     
@@ -104,7 +121,7 @@
                             </div>
                           
                    
-                @endif
+            
 
                 
                         </div>
